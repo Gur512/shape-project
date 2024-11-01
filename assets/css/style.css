@@ -1,0 +1,105 @@
+@charset "utf-8";
+
+:root {
+  --app-dark-background-color: #1d1c1c;
+  --app-white-text-color: #fff;
+  --app-gary-background-color: #2c2b2b;
+  --app-orange-color: #f90;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--app-dark-background-color);
+  color: var(--app-white-text-color);
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden; 
+}
+
+.container {
+  width: min(100% - 30px, 1200px);
+  margin-inline: auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.contant {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.shapes, .colors {
+  width: 200px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--app-gary-background-color);
+  color: var(--app-white-text-color);
+}
+
+.create-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: var(--app-orange-color);
+  color: var(--app-white-text-color);
+  cursor: pointer;
+}
+
+.shape-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 75px);
+  gap: 10px;
+  padding: 10px;
+  background-color: var(--app-gary-background-color);
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 520px; 
+  height: 350px;
+  align-content: start;
+  overflow: auto;
+}
+
+.shape {
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.circle {
+  border-radius: 50%;
+}
+
+.square {
+  border-radius: 5px;
+}
+
+.message {
+  font-size: 16px;
+  color: var(--app-white-text-color);
+  text-align: center;
+}
