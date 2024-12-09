@@ -63,7 +63,6 @@ function getColorName(hex) {
     if (hex === "#f90") return "Orange";
     if (hex === "#f09") return "Pink";
     if (hex === "#90f") return "Purple";
-    return "Unknown";
 }
 
 function isGridFull() {
@@ -91,6 +90,13 @@ function createShape() {
         return;
     }
 
+    if(shapeButton.textContent === 'Shapes' && colorButton.textContent === 'Colors') {
+        shapeButton.focus();
+        infoDisplay.textContent = 'Select the shapes and colors first!';
+        infoDisplay.style.color = "#0f0";
+        return;
+    }
+    
     const shapeType = shapes[shapeIndex];
     const color = colors[colorIndex];
 
@@ -105,3 +111,4 @@ function createShape() {
 }
 
 createButton.addEventListener('click', createShape);
+
